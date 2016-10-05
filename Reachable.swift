@@ -27,12 +27,13 @@ public class Reachable {
             return false
         }
         
-        let isReachable = flags.contains(.Reachable)
-        let needsConnection = flags.contains(.ConnectionRequired)
+        // For Swift 2, replace the last two lines by
+        // let isReachable = flags.contains(.Reachable)
+        // let needsConnection = flags.contains(.ConnectionRequired)
         
         // For Swift 3, replace the last two lines by
-        // let isReachable = flags.contains(.reachable)
-        // let needsConnection = flags.contains(.connectionRequired)
+         let isReachable = flags.contains(.reachable)
+         let needsConnection = flags.contains(.connectionRequired)
         
         
         return (isReachable && !needsConnection)
